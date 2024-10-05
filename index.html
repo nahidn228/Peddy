@@ -84,7 +84,9 @@
           <p class="text-lg font-bold text-gray-400">
             Bringing Families Together ❤️‍🔥
           </p>
-          <h1 class="font-bold text-3xl md:text-4xl lg:text-6xl">Your Path to Adoption Starts Here</h1>
+          <h1 class="font-bold text-3xl md:text-4xl lg:text-6xl">
+            Your Path to Adoption Starts Here
+          </h1>
           <p class="text-base font-medium text-gray-700">
             It is a long established fact that a reader will be distracted by
             the readable content of a page when looking at its layout. The point
@@ -98,6 +100,182 @@
           <img src="./images/pet.webp" alt="" />
         </div>
       </section>
+
+      <!-- Adopt  Your  Best Friend section -->
+
+      <section class="py-10">
+        <!-- Adopt  Your  Best Friend text -->
+        <div class="w-2/3 mx-auto text-center space-y-5 mb-10">
+          <h3 class="text-4xl font-bold">Adopt Your Best Friend</h3>
+          <p class="text-base text-gray-600">
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that it has a.
+          </p>
+        </div>
+        <!-- Adopt  Your  Best Friend Dynamic Button -->
+        <div id="category-btn" class="mt-5">
+          <!-- demo Button -->
+          <button
+            class="border-2 border-gray-300 p-2 rounded-xl px-10 flex items-center gap-2 font-bold"
+          >
+            <img
+              class="w-10 h-10"
+              src="https://img.icons8.com/?size=100&id=19RnHfQn5Cxa&format=png&color=000000"
+              alt=""
+            />
+            Dogs
+          </button>
+        </div>
+      </section>
+
+      <!-- Best Deal For you section -->
+
+      <section>
+        <!-- Best Deal For you text -->
+        <div class="flex justify-between items-center">
+          <h4 class="font-bold text-xl">Best Deal For you</h4>
+          <button class="btn bg-[#0E7A81] text-white">Sort by Price</button>
+        </div>
+
+        <!-- Best Deal For you Dynamic Card -->
+
+        <div
+          id="pet-card"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-5"
+        >
+          <!-- demo card -->
+          <div class="card bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img
+                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                alt="Shoes"
+                class="rounded-xl"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Title</h2>
+              <p class="text-sm text-gray-500 space-x-2">
+                <i class="fa-solid fa-bread-slice"></i>
+                <span id="petBread"> Breed:</span>
+              </p>
+              <p class="text-sm text-gray-500 space-x-2">
+                <i class="fa-solid fa-calendar-day"></i>
+                <span id="petBread"> Birth:</span>
+              </p>
+              <p class="text-sm text-gray-500 space-x-2">
+                <i class="fa-solid fa-venus"></i>
+                <span id="petBread"> Gender:</span>
+              </p>
+              <p class="text-sm text-gray-500 space-x-2">
+                <i class="fa-solid fa-dollar-sign"></i>
+                <span id="petBread"> Price:</span>
+              </p>
+              <div class="card-actions flex justify-around mt-3">
+                <button
+                  class="border-2 border-gray-300 p-2 rounded-xl font-bold px-5"
+                >
+                  <i class="fa-regular fa-thumbs-up"></i>
+                </button>
+                <button
+                  class="border-2 border-gray-300 p-2 rounded-xl font-bold"
+                >
+                  Adopt
+                </button>
+                <button
+                  class="border-2 border-gray-300 p-2 rounded-xl font-bold"
+                >
+                  Details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="card-action" class="grid grid-cols-2"></div>
+      </section>
     </main>
+
+    <!-- footer -->
+
+    <section class="bg-[#131313] text-white">
+      <footer
+        class="footer text-base-content max-w-screen-lg mx-auto text-white py-20"
+      >
+        <nav>
+          <a class="flex items-center gap-2 text-2xl font-extrabold">
+            <img class="w-5 h-5" src="./images/logo.webp" alt="" /> Peddy</a
+          >
+          <p>Location: av. Washington 165, NY CA 54003</p>
+          <p>Phone: +31 85 964 47 25</p>
+          <p>Email: info@peddy.com</p>
+          <p>Openings hours: 9.00 AM - 5.00 PM</p>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Services</h6>
+          <a class="link link-hover">Branding</a>
+          <a class="link link-hover">Design</a>
+          <a class="link link-hover">Marketing</a>
+          <a class="link link-hover">Advertisement</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Company</h6>
+          <a class="link link-hover">About us</a>
+          <a class="link link-hover">Contact</a>
+          <a class="link link-hover">Jobs</a>
+          <a class="link link-hover">Press kit</a>
+        </nav>
+
+        <form>
+          <h6 class="footer-title">Newsletter</h6>
+          <fieldset class="form-control">
+            <label class="label">
+              <span class="label-text text-white"
+                >Enter your email address</span
+              >
+            </label>
+            <div class="join">
+              <input
+                type="text"
+                placeholder="username@site.com"
+                class="input input-bordered join-item"
+              />
+              <button class="btn bg-[#0E7A81] text-white join-item border-none">
+                Subscribe
+              </button>
+            </div>
+            <div class="flex gap-2 pt-2">
+              <a class="" href="">
+                <img
+                  class="w-10 h-auto"
+                  src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000"
+                  alt=""
+                />
+              </a>
+              <a class="" href="">
+                <img
+                  class="w-10 h-auto"
+                  src="https://img.icons8.com/?size=100&id=5MQ0gPAYYx7a&format=png&color=000000"
+                  alt=""
+                />
+              </a>
+              <a class="" href="">
+                <img
+                  class="w-10 h-auto"
+                  src="https://img.icons8.com/?size=100&id=19318&format=png&color=000000"
+                  alt=""
+                />
+              </a>
+              <a class="" href="">
+                <img
+                  class="w-10 h-auto"
+                  src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000"
+                  alt=""
+                />
+              </a>
+            </div>
+          </fieldset>
+        </form>
+      </footer>
+    </section>
   </body>
 </html>
