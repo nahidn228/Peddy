@@ -197,6 +197,39 @@
       </section>
     </main>
 
+    <!-- Open the modal using ID.showModal() method -->
+    <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+    <dialog id="my_modal_1" class="modal">
+      <div class="modal-box">
+        <img src="${image}" alt="Pet" class="rounded-xl" />
+        <h2 class="card-title">'${pet_name}'</h2>
+        <p class="text-sm text-gray-500 space-x-2">
+          <i class="fa-solid fa-bread-slice"></i>
+          <span id="petBread"> Breed: ${breed}</span>
+        </p>
+        <p class="text-sm text-gray-500 space-x-2">
+          <i class="fa-solid fa-calendar-day"></i>
+          <span id="petBread"> Birth: ${date_of_birth}</span>
+        </p>
+        <p class="text-sm text-gray-500 space-x-2">
+          <i class="fa-solid fa-venus"></i>
+          <span id="petBread"> Gender: ${gender}</span>
+        </p>
+        <p class="text-sm text-gray-500 space-x-2">
+          <i class="fa-solid fa-dollar-sign"></i>
+          <span id="petBread"> Price: ${price}</span>
+        </p>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    
+
     <!-- footer -->
 
     <section class="bg-[#131313] text-white">
@@ -280,6 +313,7 @@
       </footer>
     </section>
 
-    <script src="./pet.js"></script>
+    <!-- <script src="./pet.js"></script> -->
+    <script src="./test.js"></script>
   </body>
 </html>
