@@ -21,17 +21,12 @@
     ></script>
 
     <!-- custom CSS -->
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+    <link rel="stylesheet" href="style.css" />
 
-      .font-lato {
-        font-family: "Lato", sans-serif;
-      }
-    </style>
     <title>Peddy Pet</title>
   </head>
   <body class="font-lato">
-    <header class="max-w-screen-lg mx-auto">
+    <header class="max-w-screen-xl mx-auto">
       <div class="navbar bg-base-100">
         <div class="navbar-start">
           <div class="dropdown">
@@ -76,7 +71,7 @@
         </div>
       </div>
     </header>
-    <main class="max-w-screen-lg mx-auto space-y-10 mt-10">
+    <main class="max-w-screen-xl mx-auto space-y-10 mt-10">
       <!-- Hero section -->
       <section class="flex flex-col gap-4 items-center">
         <!-- hero content -->
@@ -114,7 +109,7 @@
           </p>
         </div>
         <!-- Adopt  Your  Best Friend Dynamic Button -->
-        <div id="category-container" class="mt-5 flex justify-between">
+        <div id="category-container" class="mt-5 flex justify-around">
           <!-- demo Button -->
           <!-- <button
             onclick="toggleButton()"
@@ -140,95 +135,98 @@
           <button class="btn bg-[#0E7A81] text-white">Sort by Price</button>
         </div>
 
+       <div class="hidden" id="loader">
+        <div class=" flex mx-auto w-52 flex-col gap-4 mt-20">
+          
+          <div class="skeleton h-4 w-28 bg-orange-400"></div>
+          <div class="skeleton h-4 w-full bg-lime-400"></div>
+          <div class="skeleton h-4 w-full bg-[#0E7A81]"></div>
+        </div>
+       </div>
+
         <!-- Best Deal For you Dynamic Card -->
 
-        <div
-          id="pet-card"
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-10 mb-16"
-        >
-          <!-- demo card -->
-          <!-- <div class="card bg-base-100 shadow-xl">
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-2">
+          <div
+            id="pet-card"
+            class="col-span-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 my-10 mb-16"
+          >
+            <!-- demo card -->
+            <!-- <div class="card bg-base-100 shadow-xl">
             <figure class="px-10 pt-10">
               <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                alt="Shoes"
+                src='${image}'
+                alt="Pet"
                 class="rounded-xl"
               />
             </figure>
             <div class="card-body">
-              <h2 class="card-title">Title</h2>
+              <h2 class="card-title">'${pet_name}'</h2>
               <p class="text-sm text-gray-500 space-x-2">
                 <i class="fa-solid fa-bread-slice"></i>
-                <span id="petBread"> Breed:</span>
+                <span id="petBread"> Breed: ${breed}</span>
               </p>
               <p class="text-sm text-gray-500 space-x-2">
                 <i class="fa-solid fa-calendar-day"></i>
-                <span id="petBread"> Birth:</span>
+                <span id="petBread"> Birth: ${date_of_birth}</span>
               </p>
               <p class="text-sm text-gray-500 space-x-2">
                 <i class="fa-solid fa-venus"></i>
-                <span id="petBread"> Gender:</span>
+                <span id="petBread"> Gender: ${gender}</span>
               </p>
               <p class="text-sm text-gray-500 space-x-2">
                 <i class="fa-solid fa-dollar-sign"></i>
-                <span id="petBread"> Price:</span>
+                <span id="petBread"> Price: ${price}</span>
               </p>
-              <div class="card-actions flex justify-around mt-3">
+              <div class="card-actions flex justify-center mt-3">
                 <button
-                  class="border-2 border-gray-300 p-2 rounded-xl font-bold px-5"
+                onclick="petModal.showModal()"
+                  class="border-2 border-gray-300  rounded-xl font-bold  btn-sm"
                 >
                   <i class="fa-regular fa-thumbs-up"></i>
                 </button>
                 <button
-                  class="border-2 border-gray-300 p-2 rounded-xl font-bold"
+                onclick="petModal.showModal()"
+                  class="border-2 border-gray-300  rounded-xl font-bold btn-sm"
                 >
                   Adopt
                 </button>
                 <button
-                  class="border-2 border-gray-300 p-2 rounded-xl font-bold"
+                onclick="petModal.showModal()"
+                  class="border-2 border-gray-300  rounded-xl font-bold btn-sm"
                 >
                   Details
                 </button>
               </div>
             </div>
           </div> -->
+          </div>
+          <div
+            id="card-action"
+            class="col-span-1 grid grid-cols-2 border-2 border-slate-300 rounded-lg my-10 mb-16 p-1"
+          >
+            <h2>Best Deal For you Dynamic Card</h2>
+          </div>
         </div>
-        <div id="card-action" class="grid grid-cols-2"></div>
       </section>
     </main>
 
     <!-- Open the modal using ID.showModal() method -->
-    <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
-    <dialog id="my_modal_1" class="modal">
+    <button
+      id="showModalData"
+      class="btn hidden"
+      onclick="petModal.showModal()"
+    >
+      open modal
+    </button>
+    <dialog id="petModal" class="modal">
       <div class="modal-box">
-        <img src="${image}" alt="Pet" class="rounded-xl" />
-        <h2 class="card-title">'${pet_name}'</h2>
-        <p class="text-sm text-gray-500 space-x-2">
-          <i class="fa-solid fa-bread-slice"></i>
-          <span id="petBread"> Breed: ${breed}</span>
-        </p>
-        <p class="text-sm text-gray-500 space-x-2">
-          <i class="fa-solid fa-calendar-day"></i>
-          <span id="petBread"> Birth: ${date_of_birth}</span>
-        </p>
-        <p class="text-sm text-gray-500 space-x-2">
-          <i class="fa-solid fa-venus"></i>
-          <span id="petBread"> Gender: ${gender}</span>
-        </p>
-        <p class="text-sm text-gray-500 space-x-2">
-          <i class="fa-solid fa-dollar-sign"></i>
-          <span id="petBread"> Price: ${price}</span>
-        </p>
-        <div class="modal-action">
-          <form method="dialog">
-            <!-- if there is a button in form, it will close the modal -->
-            <button class="btn">Close</button>
-          </form>
-        </div>
+        <div
+          id="modal-content"
+          class="space-y-4 flex flex-col justify-center"
+        ></div>
       </div>
     </dialog>
-
-    
 
     <!-- footer -->
 
