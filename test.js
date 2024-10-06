@@ -72,18 +72,19 @@ const displayCategories = (categories) => {
 
     const categoryContainer = document.getElementById("category-container");
     const div = document.createElement("div");
+    div.classList.add("p-0", "m-0");
     div.innerHTML = `
     <button
             id='btn-${category}'
             onclick="setBreak('${category}')"
-            class="border-2 border-gray-300 p-2 rounded-xl px-10 flex items-center gap-2 font-bold category-btn "
+            class="border-2 border-gray-300 p-2 rounded-xl px-10 flex items-center  font-bold category-btn "
           >
             <img
               class="w-10 h-10"
               src='${category_icon}'
               alt=""
             />
-            '${category}'
+            ${category}
           </button>
     `;
     categoryContainer.appendChild(div);
@@ -215,7 +216,7 @@ const displayAllPets = (allPets) => {
               />
             </figure>
             <div class="card-body">
-              <h2 class="card-title">'${pet_name}'</h2>
+              <h2 class="card-title">${pet_name}</h2>
               <p class="text-sm text-gray-500 space-x-2">
                 <i class="fa-solid fa-bread-slice"></i>
                 <span id="petBread"> Breed: ${breed}</span>
