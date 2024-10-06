@@ -23,7 +23,7 @@
     <!-- custom CSS -->
     <link rel="stylesheet" href="style.css" />
 
-    <title>Peddy Pet</title>
+    <title>Peddy - Pet Adoption Platform</title>
   </head>
   <body class="font-lato">
     <header class="w-11/12 md:max-w-screen-xl mx-auto">
@@ -88,7 +88,9 @@
             of using Lorem Ipsum is that it has a.
           </p>
 
-          <button class="btn bg-[#0E7A81] text-white px-6">View More</button>
+          <button class="btn bg-[#0E7A81] text-white px-6">
+            <a href="#pet-card">View More</a>
+          </button>
         </div>
         <!-- hero image -->
         <div>
@@ -245,13 +247,15 @@
         >
           <div
             id="countdownModal"
-            class="flex flex-col items-center justify-center"
+            class="flex space-y-2 flex-col items-center justify-center"
           >
             <img
               src="https://img.icons8.com/?size=100&id=yHeF9urVx2aM&format=png&color=000000"
               alt=""
             />
-            <p class="text-4xl font-bold">Congratulations !</p>
+            <p class="text-2xl font-bold">
+              Adoption process is starting for your pet
+            </p>
             <div
               class="countdown text-6xl font-bold"
               id="countdownDisplay"
@@ -270,7 +274,7 @@
 
     <section class="bg-[#131313] text-white">
       <footer
-        class="footer text-base-content w-11/12 md:max-w-screen-lg mx-auto text-white py-20"
+        class="footer text-base-content w-11/12 md:max-w-screen-xl items-center justify-between mx-auto text-white py-20"
       >
         <nav>
           <a class="flex items-center gap-2 text-2xl font-extrabold">
