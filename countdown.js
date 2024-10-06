@@ -1,5 +1,5 @@
 function countdownModal() {
-  let count = 5; // Starting count
+  let count = 3; 
   let countdownDisplay = document.getElementById('countdownDisplay');
 
   // Display initial count

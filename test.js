@@ -13,6 +13,30 @@ const loadAllPets = () => {
     .catch((err) => console.log(err));
 };
 
+//Countdown
+
+const countDown = () => {
+  document.getElementById("adopt-btn").classList.add("disable");
+  let count = 4;
+  const countdownModal = document.getElementById("countdownModal");
+  let countdownDisplay = document.getElementById("countdownDisplay");
+  // Display initial count
+  countdownDisplay.textContent = count;
+  countdownDisplay.innerHTML = ``;
+
+  const countdownInterval = setInterval(function () {
+    count--;
+    countdownDisplay.textContent = count;
+
+    if (count === 0) {
+      clearInterval(countdownInterval);
+      document.getElementById("close-btn").click();
+    }
+  }, 1000);
+
+  countdown.showModal();
+};
+
 // sorted data
 
 const sortData = () => {
@@ -72,7 +96,7 @@ const displayCategories = (categories) => {
 
     const categoryContainer = document.getElementById("category-container");
     const div = document.createElement("div");
-    div.classList.add("p-0", "m-0");
+
     div.innerHTML = `
     <button
             id='btn-${category}'
@@ -241,7 +265,8 @@ const displayAllPets = (allPets) => {
                   <i class="fa-regular fa-thumbs-up"></i>
                 </button>
                 <button
-                onclick="countdown.showModal()"
+                id="adopt-btn"
+                onclick="countDown()"
                   class="border-2 border-gray-300  rounded-xl font-bold btn-sm hover:bg-[#0E7A81] hover:text-white"
                 >
                   Adopt

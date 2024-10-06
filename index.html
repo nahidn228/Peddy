@@ -109,7 +109,10 @@
           </p>
         </div>
         <!-- Adopt  Your  Best Friend Dynamic Button -->
-        <div id="category-container" class=" mt-5 grid grid-cols-2 md:grid-cols-4 items-center justify-center gap-4">
+        <div
+          id="category-container"
+          class="mt-5 grid grid-cols-2 md:grid-cols-4 items-center justify-center gap-4"
+        >
           <!-- demo Button -->
           <!-- <button
             onclick="toggleButton()"
@@ -132,7 +135,12 @@
         <!-- Best Deal For you text -->
         <div class="flex justify-between items-center">
           <h4 class="font-bold text-xl">Best Deal For you</h4>
-          <button onclick="sortData()" class="btn bg-[#0E7A81] text-white hover:bg-slate-400 hover:text-black">Sort by Price</button>
+          <button
+            onclick="sortData()"
+            class="btn bg-[#0E7A81] text-white hover:bg-slate-400 hover:text-black"
+          >
+            Sort by Price
+          </button>
         </div>
 
         <!-- spinner -->
@@ -203,7 +211,7 @@
           </div>
           <div
             id="card-action"
-            class="col-span-1 grid grid-cols-2 gap-2 border-2 border-slate-300 rounded-lg p-1 mt-10 auto-rows-min"
+            class="col-span-1 grid grid-cols-2 gap-2 border-2 border-slate-300 rounded-lg p-1 my-10 auto-rows-min"
           ></div>
         </div>
       </section>
@@ -228,22 +236,31 @@
 
     <!-- countdown modal -->
     <!-- Open the modal using ID.showModal() method -->
-    <button class="btn" onclick="countdown.showModal()">open modal</button>
+
     <dialog id="countdown" class="modal modal-bottom sm:modal-middle">
       <div class="modal-box">
         <div
           id="modal-countdown"
-          class="space-y-4 flex flex-col justify-center"
+          class="space-y-4 flex flex-col justify-center items-center"
         >
-          <div id="countdownModal" class="modal">
-            <div class="modal-content">
-              <div class="countdown" id="countdownDisplay"></div>
-            </div>
+          <div
+            id="countdownModal"
+            class="flex flex-col items-center justify-center"
+          >
+            <img
+              src="https://img.icons8.com/?size=100&id=yHeF9urVx2aM&format=png&color=000000"
+              alt=""
+            />
+            <p class="text-4xl font-bold">Congratulations !</p>
+            <div
+              class="countdown text-6xl font-bold"
+              id="countdownDisplay"
+            ></div>
           </div>
         </div>
         <div class="modal-action">
           <form method="dialog">
-            <button id="close-btn" class="btn">Close</button>
+            <button id="close-btn" class="btn hidden">Close</button>
           </form>
         </div>
       </div>
