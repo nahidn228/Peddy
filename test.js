@@ -44,7 +44,7 @@ const sortData = () => {
     .then((res) => res.json())
     .then((data) => {
       const allPets = data.pets;
-      const sorted = [...allPets].sort((a, b) => a.price - b.price);
+      const sorted = [...allPets].sort((a, b) => b.price - a.price);
       displayAllPets(sorted);
     })
     .catch((err) => console.log(err));
@@ -247,15 +247,21 @@ const displayAllPets = (allPets) => {
               </p>
               <p class="text-sm text-gray-500 space-x-2">
                 <i class="fa-solid fa-calendar-day"></i>
-                <span id="petBread"> Birth: ${date_of_birth}</span>
+                <span id="petBread"> Birth: ${
+                  date_of_birth ? date_of_birth : "Available soon"
+                }</span>
               </p>
               <p class="text-sm text-gray-500 space-x-2">
                 <i class="fa-solid fa-venus"></i>
-                <span id="petBread"> Gender: ${gender}</span>
+                <span id="petBread"> Gender: ${
+                  gender ? gender : "Available soon"
+                }</span>
               </p>
               <p class="text-sm text-gray-500 space-x-2">
                 <i class="fa-solid fa-dollar-sign"></i>
-                <span id="petBread"> Price: ${price}</span>
+                <span id="petBread"> Price: ${
+                  price ? price : "Available soon"
+                }</span>
               </p>
               <div class="card-actions flex justify-center mt-3">
                 <button
