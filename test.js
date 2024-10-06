@@ -7,7 +7,22 @@ const loadCategories = () => {
 const loadAllPets = () => {
   fetch("https://openapi.programming-hero.com/api/peddy/pets")
     .then((res) => res.json())
-    .then((data) => displayAllPets(data.pets))
+    .then((data) => {
+      displayAllPets(data.pets);
+    })
+    .catch((err) => console.log(err));
+};
+
+// sorted data
+
+const sortData = () => {
+  fetch(`https://openapi.programming-hero.com/api/peddy/pets`)
+    .then((res) => res.json())
+    .then((data) => {
+      const allPets = data.pets;
+      const sorted = [...allPets].sort((a, b) => a.price - b.price);
+      displayAllPets(sorted);
+    })
     .catch((err) => console.log(err));
 };
 
@@ -27,6 +42,16 @@ const setBreak = (category) => {
   }, 2000);
 };
 
+const showPic = (image) => {
+  console.log(image);
+  const cardLikeBtnAction = document.getElementById("card-action");
+  const div = document.createElement("div");
+  div.innerHTML = `
+  <img src='${image}' alt="">
+  
+  `;
+  cardLikeBtnAction.appendChild(div);
+};
 const loadCategoryPets = (category) => {
   document.getElementById("loader").classList.add("hidden");
   console.log("2 second gone");
@@ -209,20 +234,20 @@ const displayAllPets = (allPets) => {
               </p>
               <div class="card-actions flex justify-center mt-3">
                 <button
-                onclick=""
-                  class="border-2 border-gray-300  rounded-xl font-bold  btn-sm"
+                onclick="showPic('${image}')"
+                  class="border-2 border-gray-300  rounded-xl font-bold  btn-sm hover:bg-[#0E7A81] hover:text-white"
                 >
                   <i class="fa-regular fa-thumbs-up"></i>
                 </button>
                 <button
-                onclick=""
-                  class="border-2 border-gray-300  rounded-xl font-bold btn-sm"
+                onclick="countdown.showModal()"
+                  class="border-2 border-gray-300  rounded-xl font-bold btn-sm hover:bg-[#0E7A81] hover:text-white"
                 >
                   Adopt
                 </button>
                 <button
                 onclick="loadPetDetails('${petId}')"
-                  class="border-2 border-gray-300  rounded-xl font-bold btn-sm"
+                  class="border-2 border-gray-300  rounded-xl font-bold btn-sm hover:bg-[#0E7A81] hover:text-white"
                 >
                   Details
                 </button>
