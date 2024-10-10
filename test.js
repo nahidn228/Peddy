@@ -243,7 +243,7 @@ const displayAllPets = (allPets) => {
               <h2 class="card-title">${pet_name}</h2>
               <p class="text-sm text-gray-500 space-x-2">
                 <i class="fa-solid fa-bread-slice"></i>
-                <span id="petBread"> Breed: ${breed}</span>
+                <span id="petBread"> Breed: ${breed ? breed : "Available soon"}</span>
               </p>
               <p class="text-sm text-gray-500 space-x-2">
                 <i class="fa-solid fa-calendar-day"></i>
