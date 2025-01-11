@@ -25,7 +25,7 @@ It utilizes APIs to fetch pet-related data such as all pets, categories of pets,
 
 ## Live Project
 
-The project is deployed and accessible https://peddy-pet.surge.sh/.
+The project is deployed and accessible https://peddy-pet.surge.sh
 
 ---
 
